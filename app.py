@@ -1,8 +1,17 @@
 
 import random
 opciones = ["piedra", "papel", "tijeras"]
-jugador = input("Elige piedra, papel o tijeras: ").lower()
+
+def obtener_jugada():
+    while True:
+        jugador = input ("Elige piedra, papel o tijeras: ").lower()
+        if jugador in opciones:
+            return jugador
+        else:
+            print("Opcion Invalida.")
+jugador = obtener_jugada()
 computadora = random.choice(opciones)
+
 print("La Computadora eligió:", computadora)
 if jugador == computadora:
     print("¡Empate!")
