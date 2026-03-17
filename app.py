@@ -1,4 +1,4 @@
-
+import tkinter as tk
 import random
 opciones = ["piedra", "papel", "tijeras"]
 
@@ -10,11 +10,12 @@ def obtener_jugada():
         else:
             print("Opcion Invalida.")
 
-jugador = obtener_jugada()
-computadora = random.choice(opciones)
+
 victorias_jugador = 0
 victorias_computadora = 0
 while True:
+    jugador = obtener_jugada()
+    computadora = random.choice(opciones)
     print("La Computadora eligió:", computadora)
     if jugador == computadora:
         print("¡Empate!")
